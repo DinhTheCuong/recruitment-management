@@ -29,6 +29,7 @@ const Footer: React.FC = () => {
           <Input
             placeholder='Your Email ...'
             allowClear
+            className='border-none'
             suffix={<MdSend className='text-[var(--highlight-clr)] text-2xl' />}
           />
         </div>
