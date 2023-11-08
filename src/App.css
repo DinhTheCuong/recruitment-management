@@ -1,0 +1,19 @@
+.active {
+  margin-top: 8px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid var(--highlight-clr);
+}
+
+.ant-select-suffix {
+  color: white;
+}
+
+.search {
+  border: none;
+}
+
+.search:hover {
+  opacity: 0.85;
+  color: #fff !important;
+  border: none !important;
+}
