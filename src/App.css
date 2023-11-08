@@ -17,3 +17,7 @@
   color: #fff !important;
   border: none !important;
 }
+
+.ant-input {
+  background-color: transparent !important;
+}

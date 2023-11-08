@@ -65,7 +65,6 @@ const Search: React.FC = () => {
           ]}
         />
         <Button
-          style={{}}
           size='large'
           className='search'
         >
