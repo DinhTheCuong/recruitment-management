@@ -37,7 +37,7 @@ const JobTag: React.FC = () => {
             <div className='flex items-center gap-4 mt-2'>
               <span className='flex items-center gap-1 text-sm'>
                 <MdAutoGraph className='text-[var(--highlight-clr)] text-2xl' />
-                Intern/Fresher Level
+                Intern / Fresher
               </span>
               <span className='flex items-center gap-1 text-sm'>
                 <MdLocationCity className='text-[var(--highlight-clr)] text-xl' />
