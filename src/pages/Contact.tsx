@@ -20,7 +20,10 @@ const Contact: React.FC = () => {
           <div className='h-[4px] w-[10%] bg-[var(--highlight-clr)] my-4' />
         </div>
       </div>
-      <div className='w-full mx-auto max-w-6xl py-8 flex items-center justify-between gap-10'>
+      <div
+        className='w-full mx-auto max-w-6xl py-8 flex items-center justify-between gap-10'
+        style={{ minHeight: 'calc(100vh - 434px)' }}
+      >
         <div className='w-1/2 h-full flex flex-col'>
           <span className='text-3xl text-[var(--highlight-clr)] font-bold block mb-4'>
             Get In Touch
