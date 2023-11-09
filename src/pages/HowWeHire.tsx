@@ -21,7 +21,10 @@ const HowWeHire: React.FC = () => {
           <span className='text-xl text-white'>Becoming Us In Four Steps</span>
         </div>
       </div>
-      <div className='w-full max-w-6xl mx-auto h-[600px] py-8 mt-4'>
+      <div
+        className='w-full max-w-6xl mx-auto py-8 mt-4'
+        style={{ minHeight: 'calc(100vh - 450px)' }}
+      >
         <StepApply />
       </div>
       <Footer />
