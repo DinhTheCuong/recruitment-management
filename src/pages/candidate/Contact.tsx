@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import banner from '../assets/images/banner.jpg';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import banner from '../../assets/images/banner.jpg';
 import { MdMail, MdPhone, MdMyLocation } from 'react-icons/md';
 
 const Contact: React.FC = () => {

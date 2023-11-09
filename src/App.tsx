@@ -1,8 +1,11 @@
 import './App.css';
-import Home from './pages/Home';
-import Career from './pages/Career';
-import Contact from './pages/Contact';
-import HowWeHire from './pages/HowWeHire';
+import Home from './pages/candidate/Home';
+import Career from './pages/candidate/Career';
+import Contact from './pages/candidate/Contact';
+import HowWeHire from './pages/candidate/HowWeHire';
+
+import Dashboard from './pages/hr/Dashboard';
+
 import { Routes, Route } from 'react-router-dom';
 import { FloatButton } from 'antd';
 import { MdDoubleArrow } from 'react-icons/md';
@@ -11,6 +14,7 @@ function App() {
   return (
     <>
       <Routes>
+        {/* Candidate */}
         <Route
           path='/'
           element={<Home />}
@@ -26,6 +30,12 @@ function App() {
         <Route
           path='/how-we-hire'
           element={<HowWeHire />}
+        />
+
+        {/* HR */}
+        <Route
+          path='/hr/dashboard'
+          element={<Dashboard />}
         />
       </Routes>
       <FloatButton.BackTop

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import banner from '../assets/images/banner.jpg';
-import StepApply from '../components/StepApply';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import banner from '../../assets/images/banner.jpg';
+import StepApply from '../../components/StepApply';
 
 const HowWeHire: React.FC = () => {
   return (
