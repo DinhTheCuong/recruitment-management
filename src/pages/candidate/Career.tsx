@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import JobTag from '../components/JobTag';
-import banner from '../assets/images/banner.jpg';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import JobTag from '../../components/JobTag';
+import banner from '../../assets/images/banner.jpg';
 import { ConfigProvider, Input } from 'antd';
 import { MdSearch } from 'react-icons/md';
 

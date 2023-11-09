@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
 import { Button, ConfigProvider } from 'antd';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <ConfigProvider
       theme={{
@@ -67,6 +68,7 @@ const Header: React.FC = () => {
             <Button
               shape='round'
               type='default'
+              onClick={() => navigate('/hr/dashboard')}
             >
               LOGIN
             </Button>
