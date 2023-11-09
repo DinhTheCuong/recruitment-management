@@ -8,18 +8,7 @@ import { MdSearch } from 'react-icons/md';
 
 const Career: React.FC = () => {
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Input: {
-            colorBgContainer: 'rgba(255, 255, 255, 0.3)',
-            colorTextPlaceholder: '#fff',
-            colorText: '#fff',
-            activeBg: '#666',
-          },
-        },
-      }}
-    >
+    <>
       <Header />
       <div
         style={{
@@ -31,15 +20,28 @@ const Career: React.FC = () => {
         <div className='w-full h-full max-w-6xl mx-auto flex flex-col items-center justify-center'>
           <span className='text-3xl font-bold text-white'>CURRENT JOBS</span>
           <div className='h-[4px] w-[10%] bg-[var(--highlight-clr)] my-4' />
-          <Input
-            allowClear
-            size='large'
-            className='w-[60%] border-none'
-            placeholder='Search Jobs ...'
-            suffix={
-              <MdSearch className='text-[var(--highlight-clr)] text-2xl' />
-            }
-          />
+          <ConfigProvider
+            theme={{
+              components: {
+                Input: {
+                  colorBgContainer: 'rgba(255, 255, 255, 0.3)',
+                  colorTextPlaceholder: '#fff',
+                  colorText: '#fff',
+                  activeBg: '#666',
+                },
+              },
+            }}
+          >
+            <Input
+              allowClear
+              size='large'
+              className='w-[60%] border-none'
+              placeholder='Search Jobs ...'
+              suffix={
+                <MdSearch className='text-[var(--highlight-clr)] text-2xl' />
+              }
+            />
+          </ConfigProvider>
         </div>
       </div>
       <div className='mx-auto max-w-6xl py-8 flex flex-col gap-6'>
@@ -51,7 +53,7 @@ const Career: React.FC = () => {
         <JobTag />
       </div>
       <Footer />
-    </ConfigProvider>
+    </>
   );
 };
 
