@@ -1,24 +1,42 @@
-import React from 'react';
-import { Button } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import React, { PropsWithChildren, useState } from 'react';
+import { Layout, Space } from 'antd';
+import HeaderHr from '../../components/HeaderHr';
+import SidebarHr from '../../components/SidebarHr';
 
-const Dashboard: React.FC = () => {
-  const navigate = useNavigate();
+interface LayoutProps extends PropsWithChildren {
+  content: React.ReactNode;
+}
+
+const { Content } = Layout;
+
+const Dashboard: React.FC<LayoutProps> = ({ content }) => {
+  const [collapsed, setCollapsed] = useState(false);
+  const handleCollapse = (isCollapsed: boolean) => {
+    setCollapsed(isCollapsed);
+  };
+
   return (
-    <div className='w-full h-screen bg-[var(--primary-clr)] flex flex-col items-center justify-center'>
-      <span className='text-[var(--highlight-clr)] font-bold text-6xl'>
-        HR Dashboard
-      </span>
-      <span className='text-white text-xl mt-8'>Comming Soon</span>
-
-      <Button
-        type='primary'
-        className='mt-8'
-        onClick={() => navigate('/')}
+    <>
+      <Space
+        direction='vertical'
+        style={{ width: '100%' }}
+        size={[0, 48]}
       >
-        Back To Page For Candidate
-      </Button>
-    </div>
+        <Layout>
+          <SidebarHr
+            collapsed={collapsed}
+            handleCollapse={handleCollapse}
+          />
+          <Layout>
+            <HeaderHr
+              collapsed={collapsed}
+              setCollapsed={setCollapsed}
+            />
+            <Content>{content}</Content>
+          </Layout>
+        </Layout>
+      </Space>
+    </>
   );
 };
 
