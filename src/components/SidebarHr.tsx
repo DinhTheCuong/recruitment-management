@@ -4,7 +4,6 @@ import Sider from 'antd/es/layout/Sider';
 import logo from '../assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SidebarHr: React.FC<{ collapsed: any; handleCollapse: any }> = (
   props,
 ) => {
@@ -20,7 +19,9 @@ const SidebarHr: React.FC<{ collapsed: any; handleCollapse: any }> = (
     >
       <div
         className='h-[62px] flex items-center justify-center cursor-pointer'
-        onClick={() => navigate(0)}
+        onClick={() => {
+          navigate('/hr/dashboard'), navigate(0);
+        }}
       >
         <img
           src={logo}

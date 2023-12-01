@@ -1,42 +1,10 @@
-import React, { PropsWithChildren, useState } from 'react';
-import { Layout, Space } from 'antd';
-import HeaderHr from '../../components/HeaderHr';
-import SidebarHr from '../../components/SidebarHr';
+import React from 'react';
 
-interface LayoutProps extends PropsWithChildren {
-  content: React.ReactNode;
-}
-
-const { Content } = Layout;
-
-const Dashboard: React.FC<LayoutProps> = ({ content }) => {
-  const [collapsed, setCollapsed] = useState(false);
-  const handleCollapse = (isCollapsed: boolean) => {
-    setCollapsed(isCollapsed);
-  };
-
+const Dashboard: React.FC = () => {
   return (
-    <>
-      <Space
-        direction='vertical'
-        style={{ width: '100%' }}
-        size={[0, 48]}
-      >
-        <Layout>
-          <SidebarHr
-            collapsed={collapsed}
-            handleCollapse={handleCollapse}
-          />
-          <Layout>
-            <HeaderHr
-              collapsed={collapsed}
-              setCollapsed={setCollapsed}
-            />
-            <Content>{content}</Content>
-          </Layout>
-        </Layout>
-      </Space>
-    </>
+    <div className='h-full text-3xl font-bold text-[var(--hr-clr)] flex items-center justify-center'>
+      Home
+    </div>
   );
 };
 
