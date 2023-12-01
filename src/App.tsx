@@ -5,6 +5,8 @@ import Contact from './pages/candidate/Contact';
 import HowWeHire from './pages/candidate/HowWeHire';
 
 import Dashboard from './pages/hr/Dashboard';
+import LayoutHr from './pages/hr/Layout';
+import JobList from './pages/hr/job/JobList';
 
 import { Routes, Route } from 'react-router-dom';
 import { FloatButton } from 'antd';
@@ -35,7 +37,11 @@ function App() {
         {/* HR */}
         <Route
           path='/hr/dashboard'
-          element={<Dashboard />}
+          element={<LayoutHr content={<Dashboard />} />}
+        />
+        <Route
+          path='/hr/job/list'
+          element={<LayoutHr content={<JobList />} />}
         />
       </Routes>
       <FloatButton.BackTop

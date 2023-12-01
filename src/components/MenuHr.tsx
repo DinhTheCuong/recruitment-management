@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ConfigProvider, Menu, MenuProps } from 'antd';
 import {
   MdOutlineTask,
@@ -19,6 +20,11 @@ function getItem(
 }
 
 const MenuHr: React.FC = () => {
+  const navigate = useNavigate();
+  const onClick = (e: any) => {
+    navigate(`/hr/${e.key}`);
+  };
+
   const items: MenuProps['items'] = [
     getItem(
       'Job',
@@ -68,6 +74,7 @@ const MenuHr: React.FC = () => {
       <Menu
         mode='inline'
         items={items}
+        onClick={onClick}
       />
     </ConfigProvider>
   );
