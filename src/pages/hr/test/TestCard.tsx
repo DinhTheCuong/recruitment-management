@@ -1,32 +1,35 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MdBuildCircle, MdCancel } from 'react-icons/md';
 
-const JobCard: React.FC = () => {
+const TestCard: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className='w-full bg-white rounded-lg border-[1px] border-solid border-[var(--hr-clr)] p-4 flex items-center justify-between'>
       <div className='flex flex-col gap-2'>
-        <span className='text-lg font-bold text-orange-700'>
-          Software Engineer
+        <span
+          className='text-lg font-bold text-orange-700 hover:cursor-pointer hover:text-orange-500'
+          onClick={() => navigate('/hr/test/ex')}
+        >
+          Algorithm
+        </span>
+        <span>
+          <span className='font-bold'>Code: </span>Alg_FE_test_01
         </span>
         <div className='flex gap-20'>
           <span>
-            <span className='font-bold'>Create: </span>01/01/2022
+            <span className='font-bold'>Time: </span>20 minutes
           </span>
           <span>
-            <span className='font-bold'>Exprired: </span>01/01/2022
+            <span className='font-bold'>Questions: </span>20
           </span>
         </div>
         <span>
-          <span className='font-bold'>Code: </span>Fr_FE_DEV
+          <span className='font-bold'>Level: </span>Intern / Fresher
         </span>
         <span>
-          <span className='font-bold'>Position: </span>Staff
-        </span>
-        <span>
-          <span className='font-bold'>Description: </span> Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Quis modi iste sint consequatur
-          omnis, quaerat, ad obcaecati a, ut quidem libero aut adipisci ipsum
-          distinctio earum ducimus ratione voluptatem animi!
+          <span className='font-bold'>Description: </span> Min 6/10 questions to
+          pass!
         </span>
       </div>
       <div className='flex gap-2'>
@@ -37,4 +40,4 @@ const JobCard: React.FC = () => {
   );
 };
 
-export default JobCard;
+export default TestCard;
