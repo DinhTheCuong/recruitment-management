@@ -7,6 +7,13 @@ import HowWeHire from './pages/candidate/HowWeHire';
 import Dashboard from './pages/hr/Dashboard';
 import LayoutHr from './pages/hr/Layout';
 import JobList from './pages/hr/job/JobList';
+import CreateJob from './pages/hr/job/CreateJob';
+import TestList from './pages/hr/test/TestList';
+import TestEx from './pages/hr/test/TestEx';
+import CreateTest from './pages/hr/test/CreateTest';
+import PeriodList from './pages/hr/period/PeriodList';
+import CreatePeriod from './pages/hr/period/CreatePeriod';
+import CandidateList from './pages/hr/candidate_mngt/CandidateList';
 
 import { Routes, Route } from 'react-router-dom';
 import { FloatButton } from 'antd';
@@ -43,7 +50,36 @@ function App() {
           path='/hr/job/list'
           element={<LayoutHr content={<JobList />} />}
         />
+        <Route
+          path='/hr/job/create'
+          element={<LayoutHr content={<CreateJob />} />}
+        />
+        <Route
+          path='/hr/test/list'
+          element={<LayoutHr content={<TestList />} />}
+        />
+        <Route
+          path='/hr/test/ex'
+          element={<LayoutHr content={<TestEx />} />}
+        />
+        <Route
+          path='/hr/test/create'
+          element={<LayoutHr content={<CreateTest />} />}
+        />
+        <Route
+          path='/hr/period/list'
+          element={<LayoutHr content={<PeriodList />} />}
+        />
+        <Route
+          path='/hr/period/create'
+          element={<LayoutHr content={<CreatePeriod />} />}
+        />
+        <Route
+          path='/hr/candidate'
+          element={<LayoutHr content={<CandidateList />} />}
+        />
       </Routes>
+
       <FloatButton.BackTop
         visibilityHeight={50}
         icon={

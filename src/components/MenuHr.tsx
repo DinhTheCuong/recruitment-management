@@ -5,6 +5,7 @@ import {
   MdOutlineTask,
   MdOutlineQuestionAnswer,
   MdOutlineViewTimeline,
+  MdOutlinePersonPin,
 } from 'react-icons/md';
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -53,6 +54,11 @@ const MenuHr: React.FC = () => {
         getItem('Periods List', 'period/list'),
         getItem('Create Period', 'period/create'),
       ],
+    ),
+    getItem(
+      'Candidate',
+      'candidate',
+      <MdOutlinePersonPin style={{ fontSize: '24px', marginRight: '4px' }} />,
     ),
   ];
 

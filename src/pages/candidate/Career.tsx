@@ -44,7 +44,10 @@ const Career: React.FC = () => {
           </ConfigProvider>
         </div>
       </div>
-      <div className='mx-auto max-w-6xl py-8 flex flex-col gap-6'>
+      <div
+        className='mx-auto max-w-6xl py-8 flex flex-col gap-6'
+        style={{ minHeight: 'calc(100vh - 434px)' }}
+      >
         <JobTag />
         <JobTag />
         <JobTag />
